@@ -34,7 +34,7 @@ def insert_order(cis, naz, obj, tel, te, jme, mes, typ='Standard'):
 
 def load_orders():
     try:
-        query = "SELECT cislo_zakazky, nazev_zakazky, jmeno_zakazky, objem, mesto, typ_zakazky FROM orders ORDER BY id DESC LIMIT 20"
+        query = "SELECT cislo_zakazky, nazev_zakazky, jmeno_zakazky, objem, mesto, termin_expedice, telefon FROM orders ORDER BY termin_expedice DESC LIMIT 20"
         return pd.read_sql(query, engine)
     except Exception as e:
         return pd.DataFrame()
@@ -107,7 +107,7 @@ with tab1:
 
 # --- TAB 2: ZPRACOVÁNÍ REKLAMACÍ ---
 with tab2:
-    st.subheader("🚨 Nahlášené reklamace z terénu")
+    st.subheader("🚨 Nahlášené reklamace. ")
     st.info("Zde vidíte seznam reklamací, které montážníci nahlásili. Přiřaďte jim nové číslo, aby se vrátily do plánu.")
     
     pending_recls = load_pending_reclamations()
