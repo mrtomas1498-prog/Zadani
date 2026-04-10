@@ -70,7 +70,7 @@ def finalize_reclamation(recl_id, new_code, row_data):
 # ============================================================
 st.title("📦 Pořízení zakázky")
 
-tab1, tab2 = st.tabs(["🆕 Nová zakázka", "🛠️ Reklanace"])
+tab1, tab2 = st.tabs(["🆕 Nová zakázka", "🛠️ Reklamace"])
 
 # --- TAB 1: ZADÁVÁNÍ NOVÝCH ZAKÁZEK ---
 with tab1:
