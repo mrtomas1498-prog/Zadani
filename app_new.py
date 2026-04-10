@@ -34,7 +34,7 @@ def insert_order(cis, naz, obj, tel, te, jme, mes, typ='Standard'):
 
 def load_orders():
     try:
-        query = "SELECT cislo_zakazky, nazev_zakazky, jmeno_zakazky, objem, mesto, termin_expedice, telefon FROM orders ORDER BY termin_expedice ASCE LIMIT 20"
+        query = "SELECT cislo_zakazky, nazev_zakazky, jmeno_zakazky, objem, mesto, termin_expedice, telefon FROM orders ORDER BY termin_expedice ASC LIMIT 20"
         return pd.read_sql(query, engine)
     except Exception as e:
         return pd.DataFrame()
