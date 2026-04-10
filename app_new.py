@@ -68,9 +68,9 @@ def finalize_reclamation(recl_id, new_code, row_data):
 # ============================================================
 # 3. UI APLIKACE
 # ============================================================
-st.title("📦 Centrální správa zakázek")
+st.title("📦 Pořízení zakázky")
 
-tab1, tab2 = st.tabs(["🆕 Nová zakázka", "🛠️ Administrace reklamací"])
+tab1, tab2 = st.tabs(["🆕 Nová zakázka", "🛠️ Reklanace"])
 
 # --- TAB 1: ZADÁVÁNÍ NOVÝCH ZAKÁZEK ---
 with tab1:
